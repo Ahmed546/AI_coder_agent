@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Agentic_AI_tool"
+version = "1.0.0"
+description = "The AI Coding Agent"
+authors = [
+    { name = "Waleed Ahmed", email = "ahmedwaleed003@gmail.com" }
+]
+license = { text = "GNU General Public License (GPL)" }
+requires-python = ">=3.6"
+
+# Use `urls` instead of `homepage`
+[project.urls]
+Homepage = "https://github.com/Ahmed546/AI_coder_agent.git"

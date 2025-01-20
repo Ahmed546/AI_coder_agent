@@ -1,12 +1,13 @@
 import streamlit as st
-from agents.coding_agent import *  # Assuming your backend class is in this file
+from agents.coding_agent import ReflectionAgent
+  
 
 # Initialize ReflectionAgent
 agent = ReflectionAgent()
 
 # Configure Streamlit page
 st.set_page_config(
-    page_title="AI Chatbot - Reflection Agent",
+    page_title="AI Coding Chatbot - Coding All You Need",
     page_icon="🤖",
     layout="centered",
     initial_sidebar_state="expanded",
