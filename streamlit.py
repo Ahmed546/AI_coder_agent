@@ -62,7 +62,7 @@ if "messages" not in st.session_state:
     st.session_state["messages"] = []
 
 # App title and description
-st.title("🤖 AI Chatbot - Reflection Agent")
+st.title("🤖 AI Coding Chatbot - Coding All You Need")
 st.write("Ask me anything and I'll provide thoughtful responses with reflections.")
 
 # Sidebar for configuration
@@ -80,7 +80,7 @@ reflection_prompt = st.sidebar.text_area(
 n_steps = st.sidebar.slider("Number of Reflection Steps", 1, 10, 3)
 
 # Main chat interface
-st.markdown("### Chat with the AI")
+st.markdown("### Code with the AI")
 user_input = st.text_input("Type your message:", "")
 
 if st.button("Send"):

@@ -2,4 +2,5 @@ groq
 python-dotenv
 Fore
 streamlit
+colorama
 -e .
