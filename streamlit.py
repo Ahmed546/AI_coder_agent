@@ -1,5 +1,5 @@
 import streamlit as st
-from agents.coding_agent import ReflectionAgent  # Assuming your backend class is in this file
+from agents.coding_agent import *  # Assuming your backend class is in this file
 
 # Initialize ReflectionAgent
 agent = ReflectionAgent()
