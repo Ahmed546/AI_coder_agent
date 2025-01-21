@@ -79,6 +79,17 @@ reflection_prompt = st.sidebar.text_area(
 )
 n_steps = st.sidebar.slider("Number of Reflection Steps", 1, 10, 3)
 
+
+
+# Chat history display
+st.markdown("### Chat History")
+st.markdown('<div class="chat-history">', unsafe_allow_html=True)
+for message in st.session_state["messages"]:
+    if message["role"] == "user":
+        st.markdown(f'<div class="message-user">👤 **You:** {message["content"]}</div>', unsafe_allow_html=True)
+    else:
+        st.markdown(f'<div class="message-bot">🤖 **AI:** {message["content"]}</div>', unsafe_allow_html=True)
+st.markdown("</div>", unsafe_allow_html=True)
 # Main chat interface
 st.markdown("### Code with the AI")
 user_input = st.text_input("Type your message:", "")
@@ -102,17 +113,6 @@ if st.button("Send"):
                 st.session_state["messages"].append({"role": "assistant", "content": response})
             except Exception as e:
                 st.error(f"An error occurred: {e}")
-
-# Chat history display
-st.markdown("### Chat History")
-st.markdown('<div class="chat-history">', unsafe_allow_html=True)
-for message in st.session_state["messages"]:
-    if message["role"] == "user":
-        st.markdown(f'<div class="message-user">👤 **You:** {message["content"]}</div>', unsafe_allow_html=True)
-    else:
-        st.markdown(f'<div class="message-bot">🤖 **AI:** {message["content"]}</div>', unsafe_allow_html=True)
-st.markdown("</div>", unsafe_allow_html=True)
-
 # Footer
 st.markdown("---")
 st.markdown(
